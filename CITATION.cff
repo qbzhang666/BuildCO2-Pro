@@ -4,10 +4,19 @@ title: "BuildCO2 Pro: upfront embodied carbon of buildings from IFC or a Revit t
 version: 0.2.0
 date-released: 2026-10-11
 license: MIT
+doi: 10.5281/zenodo.23292247
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23292247
+    description: "Concept DOI, all versions"
+  - type: doi
+    value: 10.5281/zenodo.23292248
+    description: "Version 0.2.0"
 repository-code: "https://github.com/qbzhang666/BuildCO2-Pro"
 authors:
   - family-names: Zhang
     given-names: Qianbing
+    orcid: "https://orcid.org/0000-0002-1162-6557"
     affiliation: "Department of Civil and Environmental Engineering, Monash University"
     email: qianbing.zhang@monash.edu
 references:

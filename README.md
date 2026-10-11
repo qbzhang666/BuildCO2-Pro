@@ -1,8 +1,12 @@
 # BuildCO2 Pro
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23292247.svg)](https://doi.org/10.5281/zenodo.23292247)
+
 Upfront embodied carbon (EN 15978 A1–A5) of buildings, from an IFC model or a Revit material take-off, with a
 browser dashboard, an Excel report and the carbon written back into the IFC file. Open source under the MIT
 licence (`LICENSE`). Copyright (c) 2026 Qianbing Zhang, Monash University; contact qianbing.zhang@monash.edu.
+To cite the toolbox, see `CITATION.cff` (DOI [10.5281/zenodo.23292247](https://doi.org/10.5281/zenodo.23292247)) and the
+references at the end of this file.
 
 BuildCO2 Pro replaces the Power BI dashboard of the BIM-integrated life-cycle assessment of Ma et al. (2025),
 *Building and Environment* 286, 113689, in the way that TunCO2 Pro replaced the Power BI dashboard of TunCO2 for
