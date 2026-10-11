@@ -1,0 +1,6 @@
+key,name,value,unit,source,notes
+transport.road,"Road freight, rigid and articulated trucks",0.107,kgCO2e/(t km),"Ma et al. (2025), A4 (Table 5)",Applied to every material in BuildCO2 Pro; the dashboard gave aluminium and rubber no distance
+transport.distance,"Delivery distance, round trip",60,km,"Ma et al. (2025), A4",
+grid.vic_2024,"Victoria grid 2024, scope 2 + 3",0.86,kgCO2e/kWh,"Ma et al. (2025), Table 5 (0.77 + 0.09)",
+grid.vic_nga2026,"Victoria grid, NGA Factors 2026, scope 2 + 3",0.85,kgCO2e/kWh,"NGA Factors 2026 (DCCEEW), as in TunCO2 Pro",
+spoil.tef,"Spoil haulage",0.107,kgCO2e/(t km),"Ma et al. (2025), Section 3.1",The paper multiplies bulked m3 by km by this factor: a spoil density of 1 t/m3 is implied

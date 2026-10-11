@@ -1,0 +1,26 @@
+takeoff_class,material_class
+Aluminium,aluminium.extrusion
+Aluminium Panels,aluminium.composite_panel
+AluminiumCompositePanel,aluminium.composite_panel
+AluminiumSheet,aluminium.sheet
+Ceramic,ceramic
+CeramicTile,ceramic
+Cold rolled Steel,steel.cold_rolled
+ColdrolledSteel,steel.cold_rolled
+Concrete,concrete.c32
+Concrete32,concrete.c32
+ConcreteBlock,concrete.block
+Dimension stone,stone
+Glass,glass.flat
+Glulam,timber.glulam
+Hardwood,timber.hardwood
+Plasterboard,plasterboard
+Plastic,plastic
+Plywood,timber.plywood
+Rubber,rubber
+Silicone,silicone
+Steel,steel.section
+SteelSheet,steel.decking
+Steelbar,steel.bar
+StructuralInsulatedPanel,timber.sip
+Wood,timber.glulam

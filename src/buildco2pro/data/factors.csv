@@ -1,0 +1,51 @@
+set,key,group,name,basis,value,unit,density_kg_m3,source,tier,notes
+epic2019,concrete.c32,Concrete,"Concrete, 32 MPa",volume,416,kgCO2e/m3,2327,"EPiC 2019 (Crawford et al.), as used by Ma et al. (2025)",3,Labelled kgCO2e/kg in some take-off tables; the dashboard multiplies it by volume
+epic2019,concrete.c40,Concrete,"Concrete, 40 MPa",volume,497,kgCO2e/m3,2327,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,concrete.block,Masonry and stone,Concrete block,mass,0.24,kgCO2e/kg,1400,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,steel.section,Steel,"Steel, hot-rolled sections",mass,3.7,kgCO2e/kg,7850,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,steel.cold_rolled,Steel,"Steel, cold-rolled",mass,3.7,kgCO2e/kg,7850,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,steel.sheet_wall,Steel,"Steel, sheet (panel walls, curtain panels)",mass,3.3,kgCO2e/kg,7850,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,steel.clad_frame,Steel,"Steel, light frame clad both faces (parapets, screens)",mass,3.3,kgCO2e/kg,7850,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,steel.door,Steel,"Steel, door leaves and frames",mass,5.5,kgCO2e/kg,7850,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,steel.bar,Steel,"Steel, bar",mass,2.1,kgCO2e/kg,7850,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,steel.decking,Steel,"Steel, profiled decking",area,17.9,kgCO2e/m2,7850,"EPiC 2019, as used by Ma et al. (2025)",3,Labelled kgCO2e/kg in the take-off; the dashboard multiplies it by area
+epic2019,aluminium.extrusion,Aluminium,"Aluminium, extruded (mullions, fins)",mass,29.4,kgCO2e/kg,2712,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,aluminium.sheet,Aluminium,"Aluminium, sheet",mass,26.7,kgCO2e/kg,2712,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,aluminium.composite_panel,Aluminium,Aluminium composite panel,area,102,kgCO2e/m2,1900,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,glass.flat,Glass,"Glass, flat",mass,2.0,kgCO2e/kg,2600,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,timber.glulam,Timber,Glued laminated timber,volume,1718,kgCO2e/m3,430,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,timber.hardwood,Timber,"Hardwood, sawn",volume,944,kgCO2e/m3,720,"EPiC 2019, as used by Ma et al. (2025)",3,Labelled kgCO2e/kg in two take-off rows
+epic2019,timber.plywood,Timber,Plywood,volume,3680,kgCO2e/m3,625,"EPiC 2019, as used by Ma et al. (2025)",3,Labelled kgCO2e/kg in the take-off; read as per m3
+epic2019,timber.sip,Timber,Structural insulated panel,area,135,kgCO2e/m2,139,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,plasterboard,Plasterboard,"Plasterboard, 13 mm",area,5.8,kgCO2e/m2,570,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,ceramic,Masonry and stone,Ceramic tiles,mass,1.3,kgCO2e/kg,2900,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,stone,Masonry and stone,Dimension stone,mass,1.3,kgCO2e/kg,2243,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,rubber,Plastics and rubber,Rubber flooring,mass,3.7,kgCO2e/kg,1100,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,silicone,Plastics and rubber,Silicone,mass,13.8,kgCO2e/kg,960,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,plastic,Plastics and rubber,"Plastics, general",mass,6.4,kgCO2e/kg,940,"EPiC 2019, as used by Ma et al. (2025)",3,
+epic2019,insulation,Plastics and rubber,"Insulation, general",mass,3.0,kgCO2e/kg,30,"Placeholder, not in the source take-off",4,Replace with a product EPD
+ice_uk,concrete.c32,Concrete,"Concrete, 32 MPa",volume,315.7,kgCO2e/m3,2327,"ICE V3.0 (Jones and Hammond 2019), as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.759 x EPiC
+ice_uk,concrete.c40,Concrete,"Concrete, 40 MPa",volume,377.1,kgCO2e/m3,2327,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.759 x EPiC
+ice_uk,steel.section,Steel,"Steel, hot-rolled sections",mass,2.64,kgCO2e/kg,7850,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.714 x EPiC
+ice_uk,steel.cold_rolled,Steel,"Steel, cold-rolled",mass,2.64,kgCO2e/kg,7850,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.714 x EPiC
+ice_uk,steel.sheet_wall,Steel,"Steel, sheet (panel walls, curtain panels)",mass,2.36,kgCO2e/kg,7850,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.714 x EPiC
+ice_uk,steel.clad_frame,Steel,"Steel, light frame clad both faces (parapets, screens)",mass,2.36,kgCO2e/kg,7850,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.714 x EPiC
+ice_uk,steel.door,Steel,"Steel, door leaves and frames",mass,3.93,kgCO2e/kg,7850,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.714 x EPiC
+ice_uk,steel.bar,Steel,"Steel, bar",mass,1.50,kgCO2e/kg,7850,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.714 x EPiC
+ice_uk,steel.decking,Steel,"Steel, profiled decking",area,12.8,kgCO2e/m2,7850,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.714 x EPiC
+ice_uk,aluminium.extrusion,Aluminium,"Aluminium, extruded (mullions, fins)",mass,16.7,kgCO2e/kg,2712,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.568 x EPiC
+ice_uk,aluminium.sheet,Aluminium,"Aluminium, sheet",mass,15.2,kgCO2e/kg,2712,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.568 x EPiC
+ice_uk,aluminium.composite_panel,Aluminium,Aluminium composite panel,area,57.9,kgCO2e/m2,1900,"ICE V3.0, as the ratio ICE/EPiC of the dashboard of Ma et al. (2025)",3,0.568 x EPiC
+ice_uk,concrete.block,Masonry and stone,Concrete block,mass,0.24,kgCO2e/kg,1400,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,glass.flat,Glass,"Glass, flat",mass,2.0,kgCO2e/kg,2600,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,timber.glulam,Timber,Glued laminated timber,volume,1718,kgCO2e/m3,430,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,timber.hardwood,Timber,"Hardwood, sawn",volume,944,kgCO2e/m3,720,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,timber.plywood,Timber,Plywood,volume,3680,kgCO2e/m3,625,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,timber.sip,Timber,Structural insulated panel,area,135,kgCO2e/m2,139,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,plasterboard,Plasterboard,"Plasterboard, 13 mm",area,5.8,kgCO2e/m2,570,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,ceramic,Masonry and stone,Ceramic tiles,mass,1.3,kgCO2e/kg,2900,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,stone,Masonry and stone,Dimension stone,mass,1.3,kgCO2e/kg,2243,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,rubber,Plastics and rubber,Rubber flooring,mass,3.7,kgCO2e/kg,1100,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,silicone,Plastics and rubber,Silicone,mass,13.8,kgCO2e/kg,960,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,plastic,Plastics and rubber,"Plastics, general",mass,6.4,kgCO2e/kg,940,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",3,
+ice_uk,insulation,Plastics and rubber,"Insulation, general",mass,3.0,kgCO2e/kg,30,"Same as EPiC 2019: the dashboard of Ma et al. (2025) changes only concrete, steel and aluminium",4,

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use BuildCO2 Pro, please cite the software and the paper of Ma et al. (2025)."
+title: "BuildCO2 Pro: upfront embodied carbon of buildings from IFC or a Revit take-off"
+version: 0.2.0
+date-released: 2026-10-11
+license: MIT
+repository-code: "https://github.com/qbzhang666/BuildCO2-Pro"
+authors:
+  - family-names: Zhang
+    given-names: Qianbing
+    affiliation: "Department of Civil and Environmental Engineering, Monash University"
+    email: qianbing.zhang@monash.edu
+references:
+  - type: article
+    title: "BIM-integrated LCA framework for prefabricated buildings with automated benchmarking and visual decision support"
+    authors:
+      - family-names: Ma
+        given-names: Xuan
+      - family-names: Huang
+        given-names: Mengqi
+      - family-names: Chen
+        given-names: Xilin
+      - family-names: Bai
+        given-names: Yu
+      - family-names: Zhang
+        given-names: Qianbing
+    journal: "Building and Environment"
+    volume: 286
+    start: 113689
+    year: 2025
+    doi: 10.1016/j.buildenv.2025.113689

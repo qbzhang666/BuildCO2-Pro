@@ -1,0 +1,18 @@
+{
+ "name": "Prefabricated steel-framed teaching building (Ma et al. 2025)",
+ "gfa_m2": 19000,
+ "factor_set": "epic2019",
+ "transport": {"distance_km": 60, "tef": 0.107},
+ "cranes": [{"name": "M380D", "number": 1, "power_kw": 37.8, "fleet_hours": 1584},
+            {"name": "M390D", "number": 2, "power_kw": 55.0, "fleet_hours": 3872}],
+ "grid_ef": 0.86,
+ "spoil": {"volume_m3": 65520, "distance_km": 60, "density_t_m3": 1.0, "tef": 0.107},
+ "storeys": {"roles": {"00 LOWER GROUND": "foundation", "00 ELS": "foundation", "00 GROUND FLOOR": "fixed",
+                       "01 LEVEL 1": "typical", "01 LEVEL 01": "typical", "02 LEVEL 2": "typical", "02 LEVEL 02": "typical",
+                       "03 LEVEL 3": "typical", "03 LEVEL 03": "typical", "04 ROOF": "top", "ROOF": "top",
+                       "05 PARAPET": "top", "PARAPET": "top"},
+             "typical_count": 3, "range_max": 15},
+ "levers": [{"name": "Material replacement, flat 31% (as the dashboard)", "reduction": {"*": 0.31}, "applies_to_a4_a5": true}],
+ "extra_items": [{"name": "Lighting pendants (take-off workbook, not in the Power BI tables)", "group": "Aluminium",
+                  "category": "Lighting", "tCO2e": 3175.687, "mass_t": 107.3}]
+}

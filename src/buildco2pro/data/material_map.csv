@@ -1,0 +1,34 @@
+order,match_on,pattern,material_class,note
+10,type,(?i)zone|model text|slab edge,,"Zone masses, annotation and edges: not a material"
+20,class,(?i)IfcSpace|IfcOpeningElement|IfcAnnotation|IfcVirtualElement,,Not a building product
+30,class,(?i)IfcFlowTerminal|IfcAirTerminal|IfcLightFixture|IfcFireSuppressionTerminal|IfcAlarm|IfcDuct|IfcPipe|IfcCableCarrier|IfcDistribution|IfcSensor|IfcUnitaryEquipment|IfcElectric,,Services: outside the scope of the take-off
+100,material,(?i)^con-|concrete.*(40|050)\s?mpa|shotcre,concrete.c40,
+110,material,(?i)concrete|^cast.in|hollowcore,concrete.c32,
+115,type,(?i)hollowcore|concrete slab|bored.?pier|pad.?cap,concrete.c32,
+120,material,(?i)blk-1|block|brick,concrete.block,
+130,material,(?i)blk-201|speedpanel,steel.sheet_wall,"Panel wall, check the equivalent thickness"
+140,material,(?i)bondek|decking|steelsheet|steel sheet,steel.decking,
+150,material,(?i)cold.?rolled|stud|furring|mtl-2|mtl-3,steel.cold_rolled,
+160,type,(?i)door,steel.door,Only when the material is steel
+170,material,(?i)steel.?bar,steel.bar,
+180,material,(?i)alumin|^cld-1|mtl_aluminum,aluminium.sheet,
+190,type,(?i)mullion|fin |louvre,aluminium.extrusion,Mullions and fins as extrusions: check the material name
+200,material,(?i)^gl-|^gls-|glass|glaz,glass.flat,
+205,type,(?i)l2l - panel|cld-1\d\d|speedwall_clad|speedwall_end|cladding panel|solid panel,aluminium.sheet,"Facade panels: aluminium sheet, check the equivalent thickness"
+210,material,(?i)glulam|^wod-,timber.glulam,
+220,material,(?i)hardwood|timber|wood,timber.hardwood,
+230,material,(?i)plywood,timber.plywood,
+240,material,(?i)^il-|plasterboard|gypsum|^gyp-,plasterboard,
+250,material,(?i)ceramic|tile,ceramic,
+260,material,(?i)granite|stone|paver,stone,
+270,material,(?i)rubber,rubber,
+280,material,(?i)silicone,silicone,
+290,material,(?i)plastic|vinyl|resin,plastic,
+300,material,(?i)^ins-|insulation,insulation,
+391,type_metal,(?i)cur_alum|zcur_alum|\balum\b|alum \d|cur_corner|system panel|perforated,aluminium.sheet,"Aluminium cladding panels whose Revit material is a generic metal (MTL-): sheet, by equivalent thickness"
+392,type_metal,(?i)lvr|louvre,aluminium.extrusion,"Louvre panels with a generic metal material: extrusions, by solid fraction"
+393,type_metal,(?i)sandwich|speedwall|metal module on stud|ews-\d|roofspan|metal deck|duct|stud,steel.sheet_wall,"Sandwich panels, Speedpanel, wall modules, roof sheeting and ducts modelled as solids: sheet, by equivalent thickness"
+394,type_metal,(?i)parapet|generic models|borderfloor|elevator|lift|gen_|concept,steel.clad_frame,"Framed and clad elements modelled as solids (parapets, screens, generic objects, lift): light frame, by equivalent thickness"
+400,material,(?i)^mtl-|steel|metal,steel.section,Steel by default: sheet products are caught by the equivalent-thickness check
+800,type,"(?i)\d{2,4}\s?(ub|uc|wb|wc|pfc|shs|rhs|chs)|(ub|uc|wb|wc|pfc|shs|rhs|chs)\s?\d|purlin",steel.section,Steel section by its type: the element has no material (check C1)
+900,material,(?i)render material|^default|^<unnamed>$|^$|^none$,,Placeholder or no material: reported by the checks

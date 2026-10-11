@@ -1,0 +1,9 @@
+group,factor,unit,source,notes
+Concrete,0.00595,kgCO2e/kg,"Ma et al. (2025), Table 4: WF (ECF A1-A3 + ECF A4), WRAP waste rates",
+Steel,0.03715,kgCO2e/kg,"Ma et al. (2025), Table 4",
+Aluminium,0.03715,kgCO2e/kg,"Ma et al. (2025), Table 4",As steel and other metals
+Masonry and stone,0.149205,kgCO2e/kg,"Ma et al. (2025), Table 4",
+Plastics and rubber,0.763,kgCO2e/kg,"Ma et al. (2025), Table 4",
+Timber,0.189,kgCO2e/kg,"Ma et al. (2025), Table 4",
+Plasterboard,0.41,kgCO2e/kg,"Ma et al. (2025), Table 4","The dashboard's A5w table uses 3.07 (WF 0.29 on an A1-A3 factor of 10.17 kgCO2e/kg)"
+Glass,0.127995,kgCO2e/kg,"Ma et al. (2025), Table 4",

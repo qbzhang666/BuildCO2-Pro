@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuildCO2 Pro</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/vendor/echarts.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="brand">BuildCO<sub>2</sub> Pro <span id="ver" class="muted"></span></div>
+  <div class="kpis">
+    <div class="kpi"><span>A1-A5</span><b id="k-total">-</b><small>tCO<sub>2</sub>e</small></div>
+    <div class="kpi"><span>Per m<sup>2</sup> GFA</span><b id="k-m2">-</b><small>kgCO<sub>2</sub>e/m<sup>2</sup></small></div>
+    <div class="kpi"><span>A1-A3</span><b id="k-a13">-</b><small>tCO<sub>2</sub>e</small></div>
+    <div class="kpi"><span>Checks</span><b id="k-checks">-</b><small>findings</small></div>
+  </div>
+  <div class="actions">
+    <button id="b-xlsx">Excel report</button>
+    <button id="b-ifc" title="The uploaded IFC file with a BuildCO2_Carbon property set on every element">IFC with carbon</button>
+    <button id="b-save">Save project</button>
+    <label class="btn">Open project<input id="f-proj" type="file" accept=".json" hidden></label>
+  </div>
+</header>
+<div class="layout">
+<aside>
+  <section>
+    <h3>1 Model</h3>
+    <p class="muted" id="src">Example building (synthetic)</p>
+    <label class="btn wide">Upload IFC, take-off CSV/XLSX or .pbix<input id="f-model" type="file" multiple accept=".ifc,.csv,.xlsx,.xlsm,.pbix" hidden></label>
+    <button class="wide ghost" id="b-example">Use the example building</button>
+    <p class="muted small" id="inv-sum"></p>
+  </section>
+  <section>
+    <h3>2 Project</h3>
+    <label>Name<input data-k="name"></label>
+    <label>Gross floor area (m<sup>2</sup>)<input type="number" data-k="gfa_m2"></label>
+    <label>Factor set<select data-k="factor_set"><option value="epic2019">EPiC 2019</option><option value="ice_uk">ICE V3.0 (UK)</option></select></label>
+    <label>Sheet products<select data-k="sheet_products"><option value="as_modelled">As modelled (solid)</option><option value="product_thickness">Area x product thickness</option></select></label>
+    <label class="check"><input type="checkbox" data-k="compat_dashboard"> Power BI arithmetic (take-off factors; no A4 for aluminium and rubber)</label>
+  </section>
+  <section>
+    <h3>3 Site (A4, A5)</h3>
+    <label>Delivery distance (km)<input type="number" data-k="transport.distance_km"></label>
+    <label>Road freight factor (kgCO<sub>2</sub>e/t km)<input type="number" step="0.001" data-k="transport.tef"></label>
+    <label>Grid factor (kgCO<sub>2</sub>e/kWh)<input type="number" step="0.01" data-k="grid_ef"></label>
+    <label>Spoil, bulked (m<sup>3</sup>)<input type="number" data-k="spoil.volume_m3"></label>
+    <label>Spoil haul (km)<input type="number" data-k="spoil.distance_km"></label>
+    <div id="cranes"></div>
+    <button class="ghost small" id="b-crane">Add crane</button>
+  </section>
+</aside>
+<main>
+  <nav id="tabs">
+    <button data-t="overview" class="on">Overview</button><button data-t="elements">Elements</button>
+    <button data-t="storeys">Storeys and scenarios</button><button data-t="a45">A4 and A5</button>
+    <button data-t="checks">Checks</button><button data-t="inventory">Inventory</button><button data-t="factors">Factors</button>
+  </nav>
+  <div id="warn" class="warn" hidden></div>
+  <section class="tab" id="t-overview">
+    <div class="grid2"><div class="card"><h4>Upfront carbon by module</h4><div class="chart" id="c-modules"></div></div>
+    <div class="card"><h4>A1-A3 by material group</h4><div class="chart" id="c-groups"></div></div></div>
+    <div class="card"><h4>From elements to materials (A1-A3)</h4><div class="chart tall" id="c-sankey"></div></div>
+  </section>
+  <section class="tab" id="t-elements" hidden>
+    <div class="card"><h4>A1-A3 by element category and material group</h4><div class="chart tall" id="c-elements"></div></div>
+    <div class="card"><h4>Line items</h4><div class="tablewrap"><table id="tb-lines"></table></div></div>
+  </section>
+  <section class="tab" id="t-storeys" hidden>
+    <div class="card"><h4>Storey roles</h4><p class="muted small">The building as a foundation, fixed storeys, a top and repeated typical storeys (the dashboard's modular model).</p>
+      <div id="roles"></div><label class="inline">Typical storeys in the model <input type="number" data-k="storeys.typical_count" style="width:5em"></label>
+      <label class="inline">Curve up to <input type="number" data-k="storeys.range_max" style="width:5em"> storeys</label></div>
+    <div class="grid2"><div class="card"><h4>Upfront carbon against the number of storeys</h4><div class="chart" id="c-storeys"></div></div>
+    <div class="card"><h4>Scenarios (levers)</h4><div class="chart" id="c-scen"></div><div id="levers"></div><button class="ghost small" id="b-lever">Add lever</button></div></div>
+  </section>
+  <section class="tab" id="t-a45" hidden>
+    <div class="grid2"><div class="card"><h4>A4 transport by group</h4><div class="chart" id="c-a4"></div></div>
+    <div class="card"><h4>A5 construction</h4><div class="chart" id="c-a5"></div></div></div>
+  </section>
+  <section class="tab" id="t-checks" hidden>
+    <div class="card"><h4>Checks of the inventory</h4><p class="muted small">None of these changes the numbers: each says what to look at in the model before the result is used.</p><div class="tablewrap"><table id="tb-checks"></table></div></div>
+    <div class="card"><h4>Rows without a material class</h4><div class="tablewrap"><table id="tb-uncl"></table></div></div>
+  </section>
+  <section class="tab" id="t-inventory" hidden>
+    <div class="card"><h4>Inventory <input id="q" placeholder="filter: type, material, class, storey" style="width:22em"> <label class="inline"><input type="checkbox" id="q-uncl"> not classified only</label> <a id="inv-csv" href="#">CSV</a></h4>
+    <div class="tablewrap tall"><table id="tb-inv"></table></div></div>
+  </section>
+  <section class="tab" id="t-factors" hidden>
+    <div class="card"><h4>Material factors <span class="muted small" id="fac-ver"></span></h4><p class="muted small">Edit a value to use a product EPD (recorded as tier 1).</p><div class="tablewrap tall"><table id="tb-fac"></table></div></div>
+  </section>
+</main>
+</div>
+<footer class="muted small">BuildCO2 Pro, MIT licence. Method after Ma et al. (2025), Building and Environment 286, 113689. Factors: EPiC 2019, ICE V3.0.</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
